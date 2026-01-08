@@ -1,0 +1,314 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Data</title>
+</head>
+<body>
+
+
+
+<h1 style="color: rgb(198, 22, 180);  ">Posts</h1>
+
+
+
+    <table border=1>
+        <tr>
+        <td bgcolor=silver class='medium'>id_post</td>
+        <td bgcolor=silver class='medium'>title</td>
+        <td bgcolor=silver class='medium'>content</td>
+        <td bgcolor=silver class='medium'>publish_date</td>
+        <td bgcolor=silver class='medium'>statu</td>
+        <td bgcolor=silver class='medium'>id_user</td>
+        <td bgcolor=silver class='medium'>id_category</td>
+        </tr>
+        
+        <tr>
+        <td class='normal' valign='top'>1</td>
+        <td class='normal' valign='top'>Introduction au SQL</td>
+        <td class='normal' valign='top'>Article qui explique les bases du langage SQL.</td>
+        <td class='normal' valign='top'>2024-01-05</td>
+        <td class='normal' valign='top'>published</td>
+        <td class='normal' valign='top'>1</td>
+        <td class='normal' valign='top'>NULL</td>
+        </tr>
+        
+        <tr>
+        <td class='normal' valign='top'>2</td>
+        <td class='normal' valign='top'>Les bases de SELECT</td>
+        <td class='normal' valign='top'>Comprendre la commande SELECT en SQL.</td>
+        <td class='normal' valign='top'>2024-01-10</td>
+        <td class='normal' valign='top'>published</td>
+        <td class='normal' valign='top'>1</td>
+        <td class='normal' valign='top'>NULL</td>
+        </tr>
+        
+        <tr>
+        <td class='normal' valign='top'>3</td>
+        <td class='normal' valign='top'>Utilisation de WHERE</td>
+        <td class='normal' valign='top'>Filtrer les données avec WHERE.</td>
+        <td class='normal' valign='top'>2024-01-15</td>
+        <td class='normal' valign='top'>published</td>
+        <td class='normal' valign='top'>2</td>
+        <td class='normal' valign='top'>NULL</td>
+        </tr>
+        
+        <tr>
+        <td class='normal' valign='top'>4</td>
+        <td class='normal' valign='top'>ORDER BY expliqué</td>
+        <td class='normal' valign='top'>Trier les résultats avec ORDER BY.</td>
+        <td class='normal' valign='top'>2024-01-20</td>
+        <td class='normal' valign='top'>published</td>
+        <td class='normal' valign='top'>1</td>
+        <td class='normal' valign='top'>NULL</td>
+        </tr>
+        
+        <tr>
+        <td class='normal' valign='top'>5</td>
+        <td class='normal' valign='top'>LIMIT en SQL</td>
+        <td class='normal' valign='top'>Limiter le nombre de résultats.</td>
+        <td class='normal' valign='top'>2024-01-25</td>
+        <td class='normal' valign='top'>published</td>
+        <td class='normal' valign='top'>2</td>
+        <td class='normal' valign='top'>NULL</td>
+        </tr>
+        
+        <tr>
+        <td class='normal' valign='top'>6</td>
+        <td class='normal' valign='top'>Introduction au HTML</td>
+        <td class='normal' valign='top'>Les bases du langage HTML.</td>
+        <td class='normal' valign='top'>2024-02-01</td>
+        <td class='normal' valign='top'>published</td>
+        <td class='normal' valign='top'>1</td>
+        <td class='normal' valign='top'>NULL</td>
+        </tr>
+        
+        <tr>
+        <td class='normal' valign='top'>7</td>
+        <td class='normal' valign='top'>Balises HTML importantes</td>
+        <td class='normal' valign='top'>Découverte des balises essentielles.</td>
+        <td class='normal' valign='top'>2024-02-05</td>
+        <td class='normal' valign='top'>published</td>
+        <td class='normal' valign='top'>2</td>
+        <td class='normal' valign='top'>NULL</td>
+        </tr>
+        
+        <tr>
+        <td class='normal' valign='top'>8</td>
+        <td class='normal' valign='top'>Structure d’une page web</td>
+        <td class='normal' valign='top'>Organisation HTML correcte.</td>
+        <td class='normal' valign='top'>2024-02-10</td>
+        <td class='normal' valign='top'>published</td>
+        <td class='normal' valign='top'>1</td>
+        <td class='normal' valign='top'>NULL</td>
+        </tr>
+        
+        <tr>
+        <td class='normal' valign='top'>9</td>
+        <td class='normal' valign='top'>Formulaires HTML</td>
+        <td class='normal' valign='top'>Créer des formulaires en HTML.</td>
+        <td class='normal' valign='top'>2024-02-15</td>
+        <td class='normal' valign='top'>published</td>
+        <td class='normal' valign='top'>3</td>
+        <td class='normal' valign='top'>NULL</td>
+        </tr>
+        
+        <tr>
+        <td class='normal' valign='top'>10</td>
+        <td class='normal' valign='top'>Liens et images</td>
+        <td class='normal' valign='top'>Utilisation des liens et images.</td>
+        <td class='normal' valign='top'>2024-02-20</td>
+        <td class='normal' valign='top'>published</td>
+        <td class='normal' valign='top'>1</td>
+        <td class='normal' valign='top'>NULL</td>
+        </tr>
+        </table>
+
+
+
+        <br><br>
+
+
+
+
+
+
+
+
+        <p style="color: rgb(151, 94, 220);  ">Ajouter des commentaires + Créer la transaction + Combiner les opérations + Valider ou annuler +  Vérifier</p>
+
+
+
+
+
+
+
+<div style="font-size: 10px;">
+    <h1> -- Script pour gérer les données du blog</h1>
+
+
+
+
+<h1>    START TRANSACTION;
+    </h1>
+
+
+    <h1>  -- Ajout d’un article <br>
+    
+    INSERT INTO posts (title, content, publish_date,  id_user) <br>
+    VALUES ('POST-TEST', 'Texte test', '2025-01-18', 1); <br>
+    
+    -- Mise à jour d’un utilisateur <br>
+    UPDATE users <br>
+    SET email = 'Yahia@test.com' <br>
+    WHERE id_user = 2; <br>
+    
+    -- Suppression d’un commentaire <br>
+    DELETE FROM comments WHERE id_comment = 2;</h1>
+
+
+   
+
+
+    <h1>    COMMIT; -- ou ROLLBACK en cas d’erreur</h1>
+  
+    
+
+    <h1>  select * from posts;
+</h1>
+    </div>
+
+
+
+  
+
+
+
+
+
+    <h1 style="color: rgb(144, 113, 163);  ">Posts</h1>
+
+
+
+
+
+<table border=1>
+<tr>
+<td bgcolor=silver class='medium'>id_post</td>
+<td bgcolor=silver class='medium'>title</td>
+<td bgcolor=silver class='medium'>content</td>
+<td bgcolor=silver class='medium'>publish_date</td>
+<td bgcolor=silver class='medium'>statu</td>
+<td bgcolor=silver class='medium'>id_user</td>
+<td bgcolor=silver class='medium'>id_category</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>1</td>
+<td class='normal' valign='top'>Introduction au SQL</td>
+<td class='normal' valign='top'>Article qui explique les bases du langage SQL.</td>
+<td class='normal' valign='top'>2024-01-05</td>
+<td class='normal' valign='top'>published</td>
+<td class='normal' valign='top'>1</td>
+<td class='normal' valign='top'>NULL</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>2</td>
+<td class='normal' valign='top'>Les bases de SELECT</td>
+<td class='normal' valign='top'>Comprendre la commande SELECT en SQL.</td>
+<td class='normal' valign='top'>2024-01-10</td>
+<td class='normal' valign='top'>published</td>
+<td class='normal' valign='top'>1</td>
+<td class='normal' valign='top'>NULL</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>3</td>
+<td class='normal' valign='top'>Utilisation de WHERE</td>
+<td class='normal' valign='top'>Filtrer les données avec WHERE.</td>
+<td class='normal' valign='top'>2024-01-15</td>
+<td class='normal' valign='top'>published</td>
+<td class='normal' valign='top'>2</td>
+<td class='normal' valign='top'>NULL</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>4</td>
+<td class='normal' valign='top'>ORDER BY expliqué</td>
+<td class='normal' valign='top'>Trier les résultats avec ORDER BY.</td>
+<td class='normal' valign='top'>2024-01-20</td>
+<td class='normal' valign='top'>published</td>
+<td class='normal' valign='top'>1</td>
+<td class='normal' valign='top'>NULL</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>5</td>
+<td class='normal' valign='top'>LIMIT en SQL</td>
+<td class='normal' valign='top'>Limiter le nombre de résultats.</td>
+<td class='normal' valign='top'>2024-01-25</td>
+<td class='normal' valign='top'>published</td>
+<td class='normal' valign='top'>2</td>
+<td class='normal' valign='top'>NULL</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>6</td>
+<td class='normal' valign='top'>Introduction au HTML</td>
+<td class='normal' valign='top'>Les bases du langage HTML.</td>
+<td class='normal' valign='top'>2024-02-01</td>
+<td class='normal' valign='top'>published</td>
+<td class='normal' valign='top'>1</td>
+<td class='normal' valign='top'>NULL</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>7</td>
+<td class='normal' valign='top'>Balises HTML importantes</td>
+<td class='normal' valign='top'>Découverte des balises essentielles.</td>
+<td class='normal' valign='top'>2024-02-05</td>
+<td class='normal' valign='top'>published</td>
+<td class='normal' valign='top'>2</td>
+<td class='normal' valign='top'>NULL</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>8</td>
+<td class='normal' valign='top'>Structure d’une page web</td>
+<td class='normal' valign='top'>Organisation HTML correcte.</td>
+<td class='normal' valign='top'>2024-02-10</td>
+<td class='normal' valign='top'>published</td>
+<td class='normal' valign='top'>1</td>
+<td class='normal' valign='top'>NULL</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>9</td>
+<td class='normal' valign='top'>Formulaires HTML</td>
+<td class='normal' valign='top'>Créer des formulaires en HTML.</td>
+<td class='normal' valign='top'>2024-02-15</td>
+<td class='normal' valign='top'>published</td>
+<td class='normal' valign='top'>3</td>
+<td class='normal' valign='top'>NULL</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>10</td>
+<td class='normal' valign='top'>Liens et images</td>
+<td class='normal' valign='top'>Utilisation des liens et images.</td>
+<td class='normal' valign='top'>2024-02-20</td>
+<td class='normal' valign='top'>published</td>
+<td class='normal' valign='top'>1</td>
+<td class='normal' valign='top'>NULL</td>
+</tr>
+
+<tr style="background-color: rgb(114, 86, 183);">
+<td class='normal' valign='top'>11</td>
+<td class='normal' valign='top'>POST-TEST</td>
+<td class='normal' valign='top'>Texte test</td>
+<td class='normal' valign='top'>2025-01-18</td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'>1</td>
+<td class='normal' valign='top'>NULL</td>
+</tr>
+</table>
+</body></html>
